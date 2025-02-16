@@ -1296,16 +1296,38 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+
+
 /* For devices with a max width of 600px (smartphones) */
-@media (max-width: 600px) {
-    /* Adjust styles for mobile */
-    body {
-        font-size: 14px;
-    }
-    .container {
-        padding: 10px;
-    }
+/* Ensure images resize automatically */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make all containers responsive */
+.container {
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+}
+
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 768px) {
+    /* Example: Adjust font size for header on small screens */
     .header {
-        text-align: center;
+        font-size: 20px;
+    }
+
+    /* Example: Make images fill available space on small screens */
+    .image-class {
+        width: 100%;
     }
 }
+
