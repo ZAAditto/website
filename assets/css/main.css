@@ -1297,6 +1297,54 @@ section,
   /* Add your styles here */
 }
 
+/* Ensure all images are fully responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Make hero section image responsive */
+.hero img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* Ensure section containers adapt to small screens */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Improve spacing and readability on mobile */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  .header {
+    width: 100%;
+    position: relative;
+  }
+  .header .profile-img img {
+    width: 80px;
+  }
+  .achievements .achievement-img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .portfolio .portfolio-content img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 
 
