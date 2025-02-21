@@ -85,36 +85,37 @@
     <section id="portfolio-details" class="portfolio-details section">
       <div class="container" data-aos="fade-up">
         <div class="text-center mb-4">
-          <img src="assets/img/finger.jpg" alt="Fingerprint" class="img-fluid" style="border-radius: 10px; object-fit: cover; max-width: 50%; height: auto;">
+          <img src="assets/img/finger.jpg" alt="Fingerprint" class="img-fluid" style="border-radius: 10px; object-fit: cover; width: 100%; max-width: 500px; height: auto;">
         </div>
-      </div>
       
-
+    
         <!-- Description Section -->
-        <div class="portfolio-description about-description" style="text-align: justify; max-width: 1100px; margin: auto;">
-          <p>This project was prepared for a diagnostic center in Sirajganj, Bangladesh to track employee attendance. Initially, a Google Spread Sheet was created with a dropdown menu for month and year selection. Google Sheets is online-based, allowing it to track the current date and time. The machine needs to be connected to the internet for operation. When an employee presses their finger on the machine, the machine sends the pressed finger ID to the Google Sheet. The Google Sheet then returns the respective name associated with that ID, which the machine displays.
-
+        <div class="portfolio-description about-description" style="max-width: 1100px; margin: auto; padding: 0 15px;">
+          <p style="text-align: justify;">This project was prepared for a diagnostic center in Sirajganj, Bangladesh to track employee attendance. Initially, a Google Spread Sheet was created with a dropdown menu for month and year selection. Google Sheets is online-based, allowing it to track the current date and time. The machine needs to be connected to the internet for operation. When an employee presses their finger on the machine, the machine sends the pressed finger ID to the Google Sheet. The Google Sheet then returns the respective name associated with that ID, which the machine displays.
+        
             The Google Sheet records the time when the data is received, indicating when the finger is pressed. The recorded time is placed in the respective cell. If an employee is late, it is marked in red, and if an employee is absent, this is also indicated in red. The sheet can be accessed from anywhere in the world. It also shows the number of times an employee is late or absent in a month. The backend of the sheet is programmed in JavaScript, and the machine is programmed in C++. The casing of the machine is 3D printed.
-            </p>
-
+          </p>
+        
           <div class="row gy-4 align-items-start">
             <!-- CAD Design Image -->
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
               <p><strong>CAD Design</strong></p>
               <div class="ratio ratio-16x9" style="border-radius: 10px; overflow: hidden;">
                 <img src="assets/img/CADf.png" alt="CAD" class="img-fluid" style="object-fit: contain; width: 100%; height: 100%; border-radius: 10px;">
               </div>
             </div>
-
+        
             <!-- Mode 2 Video -->
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
               <p><strong>Video demonstration</strong></p>
               <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/lOwyFp8L1xU" title="CNC" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/lOwyFp8L1xU" title="CNC" allowfullscreen style="width: 100%; height: 100%; border-radius: 10px;"></iframe>
               </div>
             </div>
           </div>
         </div>
+        
+        
       </div>
     </section>
 
