@@ -1276,12 +1276,12 @@ section,
 
 
 /* Ensure all images are fully responsive */
-img {
+/* img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-
+ */
 /* Make hero section image responsive */
 .hero img {
   object-fit: cover;
