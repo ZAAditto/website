@@ -139,25 +139,6 @@ h6 {
   }
 }
 
-.page-title.dark-background {
-  background-color: black; /* Dark background color for the stripe */
-  width: 110vw; /* Set width to 100% of the viewport width */
-  margin-left: -2vw; /* Shift it to the left to start from the left edge */
-  margin-top: -2vw;
-  padding: 10px 0; /* Padding to create vertical space */
-}
-
-.page-title .container-fluid {
-  padding-left: 2rem; /* Adjust padding as needed for content */
-  padding-right: 2rem; /* Adjust padding as needed for content */
-}
-
-.page-title h1 {
-  margin-bottom: 0; /* Adjust margin for title */
-}
-
-
-
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -267,91 +248,6 @@ h6 {
 
 /*--------------------------------------------------------------
 # Navigation Menu
-/* Left Sidebar (navmenu2) */
-.navmenu2 {
-  width: 220px; /* Reduced width of the sidebar */
-  background-color: #111; /* Sidebar background color */
-  position: fixed;
-  top: 50%; /* Position the sidebar from the top (centered vertically) */
-  left: 0;
-  transform: translateY(-50%); /* Corrects the vertical positioning */
-  height: auto; /* Remove fixed height to allow flexibility */
-  padding-top: 0;
-  z-index: 999;
-  transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the items in the sidebar */
-}
-
-/* Ensure no profile picture */
-.navmenu2 .profile, .navmenu2 img {
-  display: none; /* Hide any profile image or profile section */
-}
-
-/* Sidebar Links */
-.navmenu2 a {
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #fff;
-  display: block;
-  text-align: center;
-  transition: 0.3s;
-  width: 100%; /* Ensure the links take the full width */
-}
-
-/* Hover effect for the links */
-.navmenu2 a:hover {
-  background-color: #575757;
-}
-
-/* Active link style */
-.navmenu2 a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-/* Dropdown menu styles */
-.navmenu2 .dropdown {
-  display: block;
-}
-
-.navmenu2 .dropdown a {
-  padding: 10px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #fff;
-  display: block;
-  transition: 0.3s;
-}
-
-/* Dropdown menu hover effect */
-.navmenu2 .dropdown a:hover {
-  background-color: #575757;
-}
-
-/* Main content area */
-.main-content {
-  margin-left: 220px; /* Adjust content area based on reduced sidebar width */
-  padding: 20px;
-  transition: margin-left 0.3s;
-}
-
-/* Responsive settings for mobile view */
-@media screen and (max-width: 768px) {
-  .navmenu2 {
-    width: 100%; /* Sidebar takes full width on small screens */
-    position: static; /* Sidebar is not fixed */
-    top: 0; /* Align from the top */
-    transform: none; /* Remove the translate effect */
-  }
-
-  .main-content {
-    margin-left: 0; /* No need for left margin on small screens */
-  }
-}
-
 --------------------------------------------------------------*/
 .mobile-nav-toggle {
   display: none;
@@ -379,7 +275,7 @@ h6 {
   align-items: center;
   white-space: nowrap;
   transition: 0.3s;
-  width: 80%;
+  width: 100%;
 }
 
 .navmenu a .navicon,
@@ -616,7 +512,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   position: relative;
 }
 
@@ -788,59 +684,39 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-/* Reduce the gap between the "Skills" heading and bars */
-.section-title {
-  margin-bottom: 0px !important; /* Pull the skill bars closer */
-}
-
-/* Ensure there is no extra padding above the skill bars */
-.skills .container {
-  padding-top: 0px !important;
-}
-
-/* Style for the skills section */
 .skills .progress {
-  height: 35px !important; /* Reduce height for a compact look */
+  height: 60px;
   display: block;
   background: none;
   border-radius: 0;
-  margin-bottom: 5px !important; /* Reduce the gap between bars */
 }
 
-/* Style for the skill name and value */
 .skills .progress .skill {
   color: var(--heading-color);
   padding: 0;
-  margin: 0 0 3px 0 !important; /* Reduce space between text and bar */
+  margin: 0 0 6px 0;
   text-transform: uppercase;
   display: block;
-  font-weight: bold;
+  font-weight: 600;
   font-family: var(--heading-font);
 }
 
-/* Align skill level (Intermediate, Beginner) to the right */
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
 }
 
-/* Progress bar wrapper */
 .skills .progress-bar-wrap {
   background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 12px !important; /* Make bars slimmer */
-  border-radius: 5px;
+  height: 10px;
 }
 
-/* Actual progress bar */
 .skills .progress-bar {
-  width: 5px;
-  height: 12px !important; /* Reduce height of progress bar */
+  width: 1px;
+  height: 10px;
   transition: 0.9s;
   background-color: var(--accent-color);
-  border-radius: 5px;
 }
-
-
 
 /*--------------------------------------------------------------
 # Resume Section
@@ -1241,10 +1117,7 @@ section,
 }
 
 .contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[
-  
-
-=email]:focus,
+.contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
@@ -1431,13 +1304,13 @@ img {
   .hero p {
     font-size: 18px;
   }
-  .container {
+  /* .container {
     padding: 0 10px;
   }
   .header {
     width: 100%;
     position: relative;
-  }
+  } */
   .header .profile-img img {
     width: 80px;
   }
