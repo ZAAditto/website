@@ -472,22 +472,26 @@
           
           <script>
             const form = document.getElementById('contact-form');
+            const sentMessage = document.querySelector('.sent-message');  // Success message element
+          
             form.addEventListener('submit', function(event) {
               event.preventDefault();  // Prevent default form submission
+              
+              // Show fixed success message immediately upon click
+              sentMessage.innerText = 'Thank you! Your message has been sent.';
+              sentMessage.style.display = 'block';
+          
+              // Send the form data (without showing the loading indicator)
               fetch(form.action, {
                 method: form.method,
                 body: new FormData(form),
               })
               .then(response => {
-                if (response.ok) {
-                  document.querySelector('.sent-message').style.display = 'block';
-                  form.reset();  // Reset the form
-                } else {
-                  throw new Error('Form submission failed');
-                }
+                // Optionally, reset the form if needed
+                form.reset();
               })
               .catch(error => {
-                document.querySelector('.error-message').innerText = 'Sent! Thank you!';
+                // No action is taken here since you don't need error messages
               });
             });
           </script>
