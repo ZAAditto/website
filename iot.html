@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Fingerprint Attendance System  </title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/projcet.css" rel="stylesheet">
+
+  <style>
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .video-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .video-container {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+    }
+
+    .description {
+      margin-top: 10px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="arm.html"><i class="bi bi-folder navicon"></i><span>Robotic Arm</span></a></li>
+        <li><a href="cnc.html"><i class="bi bi-folder navicon"></i><span>CNC Machine</span></a></li>
+        <li><a href="iot.html"><i class="bi bi-folder navicon"></i><span>Fingerprint</span></a></li>
+        <li><a href="lfr.html"><i class="bi bi-folder navicon"></i><span>LFR</span></a></li>
+        <li><a href="gloves.html"><i class="bi bi-folder navicon"></i><span>Smart Gloves</span></a></li>
+        <li><a href="soccer.html"><i class="bi bi-folder navicon"></i><span>Soccer Robot</span></a></li>
+        <li><a href="cad.html"><i class="bi bi-folder navicon"></i><span>CAD Designs</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-title-custom" data-aos="fade">
+      <div class="container">
+        <h1>IoT based Fingerprint Attendance System</h1>
+      </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-4">
+          <img src="assets/img/finger.jpg" alt="Fingerprint" class="img-fluid" style="border-radius: 10px; object-fit: cover; max-width: 50%; height: auto;">
+        </div>
+      </div>
+      
+
+        <!-- Description Section -->
+        <div class="portfolio-description about-description" style="text-align: justify; max-width: 1100px; margin: auto;">
+          <p>This project was prepared for a diagnostic center in Sirajganj, Bangladesh to track employee attendance. Initially, a Google Spread Sheet was created with a dropdown menu for month and year selection. Google Sheets is online-based, allowing it to track the current date and time. The machine needs to be connected to the internet for operation. When an employee presses their finger on the machine, the machine sends the pressed finger ID to the Google Sheet. The Google Sheet then returns the respective name associated with that ID, which the machine displays.
+
+            The Google Sheet records the time when the data is received, indicating when the finger is pressed. The recorded time is placed in the respective cell. If an employee is late, it is marked in red, and if an employee is absent, this is also indicated in red. The sheet can be accessed from anywhere in the world. It also shows the number of times an employee is late or absent in a month. The backend of the sheet is programmed in JavaScript, and the machine is programmed in C++. The casing of the machine is 3D printed.
+            </p>
+
+          <div class="row gy-4 align-items-start">
+            <!-- CAD Design Image -->
+            <div class="col-lg-6">
+              <p><strong>CAD Design</strong></p>
+              <div class="ratio ratio-16x9" style="border-radius: 10px; overflow: hidden;">
+                <img src="assets/img/CADf.png" alt="CAD" class="img-fluid" style="object-fit: contain; width: 100%; height: 100%; border-radius: 10px;">
+              </div>
+            </div>
+
+            <!-- Mode 2 Video -->
+            <div class="col-lg-6">
+              <p><strong>Video demonstration</strong></p>
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/lOwyFp8L1xU" title="CNC" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <div class="copyright text-center ">
+        </div>
+        <div class="credits">
+          Designed by Zubayer Ahmed Aditto
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

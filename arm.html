@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Multifunctional Robotic Arm - Portfolio Details</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/projcet.css" rel="stylesheet">
+
+  <style>
+    .robot-image {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .video-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .video-container {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+    }
+
+    .description {
+      margin-top: 10px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="arm.html"><i class="bi bi-folder navicon"></i><span>Robotic Arm</span></a></li>
+        <li><a href="cnc.html"><i class="bi bi-folder navicon"></i><span>CNC Machine</span></a></li>
+        <li><a href="iot.html"><i class="bi bi-folder navicon"></i><span>Fingerprint</span></a></li>
+        <li><a href="lfr.html"><i class="bi bi-folder navicon"></i><span>LFR</span></a></li>
+        <li><a href="gloves.html"><i class="bi bi-folder navicon"></i><span>Smart Gloves</span></a></li>
+        <li><a href="soccer.html"><i class="bi bi-folder navicon"></i><span>Soccer Robot</span></a></li>
+        <li><a href="cad.html"><i class="bi bi-folder navicon"></i><span>CAD Designs</span></a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-title-custom" data-aos="fade">
+      <div class="container">
+        <h1>Multifunctional Robotic Arm</h1>
+      </div>
+    </div>
+    
+
+   <!-- Portfolio Section -->
+<section id="portfolio-details" class="portfolio-details section">
+  <div class="container" data-aos="fade-up">
+    <div class="text-center mb-4">
+      <img src="assets/img/robotic-arm.jpg" alt="Multifunctional Robotic Arm" class="img-fluid" style="max-width: 50%; height: auto;">
+    </div>
+
+    <!-- Description Section -->
+    <div class="portfolio-description about-description">
+      <p>This robotic arm is powered by three open-loop stepper motors, which is programmed to rotate to specific degrees for precise movement. The body parts are 3D printed, and the robot is controlled using an ESP32-based development board. The grabber is adjustable and can be customized with either a suction cup or a manipulator, depending on the task requirements. The robot operates in three different modes, which are explained below.</p>
+
+      <div class="row gy-4">
+        <!-- Mode 1 -->
+        <div style="text-align: justify" class="col-lg-6">
+          <p><strong>Mode 1: Manual Web app-controlled mode</strong></p>
+          <div class="ratio ratio-16x9 mb-4 ">
+            <iframe src="https://www.youtube.com/embed/4KocuWydgoY" title="Mode 1" allowfullscreen></iframe>
+          </div>
+          <p>A web application has been developed using HTML and CSS, hosted on the ESP32 microcontroller. The ESP32, when connected to the internet, allows for the robotic arm to be controlled remotely from anywhere in the world. The web application features eight input forms. The first three forms gather input regarding the angles and speeds for the X, Y, and Z axes. The seventh section specifies the sequence of the robot's movements (e.g., "LRUDBF" for Left, Right, Up, Down, Forward, Back). The final section allows users to input the number of iterations for the specified sequence. This system is particularly beneficial in industries where pick-and-place requirements frequently change, as the robot can be easily reprogrammed without the need for coding</p>
+        </div>
+
+        <!-- Mode 2 -->
+        <div class="col-lg-6">
+          <p><strong>Mode 2: Autonomous mode</strong></p>
+          <div class="ratio ratio-16x9 mb-4">
+            <iframe src="https://www.youtube.com/embed/Las-H5yD3kw" title="Mode 2" allowfullscreen></iframe>
+          </div>
+          <p>A camera is positioned above the robotic arm zone. The camera footage is transmitted to a laptop, where it undergoes processing using OpenCV to precisely determine the location of the colored object within the camera's field of view. Once the laptop identifies the object's location, it sends this data to an Arduino through the serial port. The Arduino receives the information from the laptop and instructs the three stepper motors responsible for movement along the X, Y, and Z axes, as well as the two servo motors controlling the grabber. Consequently, when the colored object is detected, the motors collaborate to move the robotic arm and successfully grasp the object.
+          </p>
+        </div>
+
+        <!-- Mode 3 -->
+        <div class="col-lg-6">
+          <p><strong>Mode 3:</strong></p>
+          <div class="ratio ratio-16x9 mb-4">
+            <iframe src="https://www.youtube.com/embed/W0hOYnKNu3U" title="Mode 3" allowfullscreen></iframe>
+          </div>
+          <p>A DS4 console (PlayStation controller) is used to control the robot. Both the DS4 and the ESP32 support Bluetooth 5.0 or higher. This control is necessary because it is not possible to adjust the robot's position when the power is turned on, as the motors remain rigid during this time. Therefore, a manual method is required to adjust the robot's position.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+    
+    
+
+<footer id="footer" class="footer position-relative light-background">
+
+  <div class="container">
+    <div class="copyright text-center ">
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you've purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      Designed by Zubayer Ahmed Aditto
+    </div>
+  </div>
+
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
