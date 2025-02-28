@@ -301,112 +301,136 @@
     
     
     
-    <!-- Portfolio Section -->
-    <section id="projects" class="portfolio section white-background">
+   <!-- Portfolio Section -->
+<section id="projects" class="portfolio section white-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Projects</h2>
-        <h5 class="title">Tap the images to learn more about the projects</h5>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Projects</h2>
+    <h5 class="title">Tap the images to learn more about the projects</h5>
+  </div><!-- End Section Title -->
 
-      <div class="container">
+  <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>ARM</h4>
-                  <p>Multifunctional Robotic Arm</p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="ARM" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="arm.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <style>
+          .portfolio-content {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+          .portfolio-content img {
+            width: 100%;
+            transition: transform 0.3s ease;
+          }
+          .portfolio-content:hover img {
+            transform: scale(1.1);
+          }
+          .portfolio-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+          .portfolio-content:hover .portfolio-info {
+            opacity: 1;
+          }
+        </style>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <a href="arm.html">
+              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Multifunctional Robotic Arm</h4>
               </div>
-            </div><!-- End Portfolio Item -->
+            </a>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>CNC</h4>
-                  <p>CNC Machine</p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="CNC" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="cnc.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <a href="cnc.html">
+              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>CNC Machine</h4>
               </div>
-            </div><!-- End Portfolio Item -->
+            </a>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/finger.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>IoT</h4>
-                  <p>IoT based Fingerprint Attendance System</p>
-                  <a href="assets/img/portfolio/finger.jpg" title="Finger" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="iot.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <a href="iot.html">
+              <img src="assets/img/portfolio/finger.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>IoT Based Fingerprint Attendance System</h4>
               </div>
-            </div><!-- End Portfolio Item -->
+            </a>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/lfr.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>LFR</h4>
-                  <p>Advanced Line & Wall Following Robot</p>
-                  <a href="assets/img/portfolio/lfr.jpg" title="LFR" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="lfr.html" title="LFR" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <a href="lfr.html">
+              <img src="assets/img/portfolio/lfr.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Advanced Line & Wall Following Robot</h4>
               </div>
-            </div><!-- End Portfolio Item -->
+            </a>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/gloves.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Gloves</h4>
-                  <p>Smart hand gloves for deaf and mute people</p>
-                  <a href="assets/img/portfolio/gloves.jpg" title="Gloves" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="gloves.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <a href="gloves.html">
+              <img src="assets/img/portfolio/gloves.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Smart Hand Gloves for Deaf and Mute People</h4>
               </div>
-            </div><!-- End Portfolio Item -->
+            </a>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/soccer.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Soccer</h4>
-                  <p>Remote-Controlled Soccer Robot</p>
-                  <a href="assets/img/portfolio/soccer.jpg" title="Soccer" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="soccer.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <a href="soccer.html">
+              <img src="assets/img/portfolio/soccer.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Remote-Controlled Soccer Robot</h4>
               </div>
-            </div><!-- End Portfolio Item -->
+            </a>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/cad.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>CAD</h4>
-                  <p>My CAD designs</p>
-                  <a href="assets/img/portfolio/cad.jpg" title="cad" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="cad.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <a href="cad.html">
+              <img src="assets/img/portfolio/cad.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>My CAD Designs</h4>
               </div>
-            </div><!-- End Portfolio Item -->
+            </a>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-          </div><!-- End Portfolio Container -->
+      </div><!-- End Portfolio Container -->
 
-        </div>
+    </div>
 
-      </div>
+  </div>
 
-    </section><!-- /Portfolio Section -->
+</section><!-- /Portfolio Section -->
 
     <section id="contact" class="contact section light-background">
     <div class="container" data-aos="fade-up" data-aos-delay="100">
