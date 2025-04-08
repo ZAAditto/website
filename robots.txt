@@ -1,0 +1,8 @@
+# robots.txt file for https://zaaditto.github.io/website/
+
+# Allow all search engine bots to crawl everything
+User-agent: *
+Disallow:
+
+# Specify the sitemap location
+Sitemap: https://zaaditto.github.io/website/sitemap.xml
