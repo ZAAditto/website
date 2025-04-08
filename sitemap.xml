@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://zaaditto.github.io/website/</loc>
+  <lastmod>2025-04-08T19:40:41+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://zaaditto.github.io/website/index.html</loc>
+  <lastmod>2025-04-08T19:40:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zaaditto.github.io/website/arm.html</loc>
+  <lastmod>2025-04-08T19:40:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zaaditto.github.io/website/cnc.html</loc>
+  <lastmod>2025-04-08T19:40:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zaaditto.github.io/website/iot.html</loc>
+  <lastmod>2025-04-08T19:40:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zaaditto.github.io/website/lfr.html</loc>
+  <lastmod>2025-04-08T19:40:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zaaditto.github.io/website/gloves.html</loc>
+  <lastmod>2025-04-08T19:40:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zaaditto.github.io/website/soccer.html</loc>
+  <lastmod>2025-04-08T19:40:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zaaditto.github.io/website/cad.html</loc>
+  <lastmod>2025-04-08T19:40:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
