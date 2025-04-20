@@ -56,6 +56,70 @@
 
 <body class="index-page">
 
+  <!-- Wedding Countdown Banner -->
+<div id="wedding-banner">
+  <p>💍 Aditto and Sathi are getting married in <span id="countdown"></span></p>
+</div>
+
+<style>
+  #wedding-banner {
+    background-color: #1a1a1a; /* matches dark theme */
+    color: #ffcccb; /* soft wedding-pink text */
+    text-align: center;
+    padding: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  body {
+    padding-top: 60px; /* to push content below banner */
+  }
+</style>
+
+<script>
+  // Set the wedding date
+  const weddingDate = new Date("April 25, 2025 00:00:00").getTime();
+  const banner = document.getElementById("wedding-banner");
+
+  const countdownTimer = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    // Hide banner after wedding day
+    if (now > weddingDate + 24 * 60 * 60 * 1000) { // 1 day grace period
+      banner.style.display = "none";
+      clearInterval(countdownTimer);
+      return;
+    }
+
+    // Show "Just Married" message on wedding day
+    if (distance <= 0) {
+      document.getElementById("countdown").innerHTML = "🎉 Just Married!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+      (distance % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+</script>
+
+  /////////////////////////////
+  
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
