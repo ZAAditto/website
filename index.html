@@ -55,8 +55,9 @@
 
 
 <body class="index-page">
-//////////
-  <!-- Wedding Countdown Banner -->
+<!-- Google Font for Wedding Banner -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
 <!-- Wedding Countdown Banner -->
 <div id="wedding-banner-container">
   <div id="wedding-banner">
@@ -76,14 +77,13 @@
     max-width: 1200px;
     width: 100%;
     padding: 10px 20px;
-    font-family: monospace; /* matches your site font */
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffcccb;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
     text-align: center;
   }
 
-  /* Optional: Add a small top margin to nav bar for visual space */
   nav {
     margin-top: 10px;
   }
@@ -116,11 +116,8 @@
     document.getElementById("countdown").innerHTML =
       `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }, 1000);
-</script>
-
-
-  /////////////////////////////
-  
+</script> 
+  /////
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
