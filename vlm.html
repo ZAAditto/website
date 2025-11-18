@@ -24,20 +24,133 @@
   <link href="assets/css/projcet.css" rel="stylesheet">
 
   <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #0f172a;
+    }
+
+    /* Page title area */
+    .page-title-custom {
+      padding: 80px 0 60px;
+      background: radial-gradient(circle at top left, #4f46e5 0, #0f172a 55%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .page-title-custom h1 {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 0;
+    }
+
+    /* Card-style main content */
+    .portfolio-details .portfolio-description {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 32px 24px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
+      margin-top: -40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 992px) {
+      .portfolio-details .portfolio-description {
+        padding: 40px 48px;
+      }
+    }
+
+    /* YouTube Shorts video */
     iframe {
-      width: 100%;
-      height: 350px;
-      border-radius: 10px;
       border: none;
     }
 
-    /* More vertical layout for YouTube Shorts */
-    iframe.vlm-shorts {
+    .vlm-shorts {
+      width: 100%;
       max-width: 420px;
       aspect-ratio: 9 / 16;
-      height: auto;           /* let aspect-ratio handle height */
+      height: auto;
+      border-radius: 16px;
       display: block;
       margin: 0 auto;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.55);
+    }
+
+    .video-label {
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+
+    /* Typography */
+    .portfolio-description h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .portfolio-description h3 {
+      font-size: 1.25rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .portfolio-description h4 {
+      font-size: 1.05rem;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #1f2933;
+    }
+
+    .portfolio-description p {
+      color: #4b5563;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    /* Two-column bullet grid */
+    .task-grid {
+      list-style: none;
+      padding-left: 0;
+      margin: 8px 0 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem 1.75rem;
+    }
+
+    .task-grid li {
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .task-grid li::before {
+      content: "●";
+      font-size: 0.55rem;
+      margin-top: 6px;
+      color: #6366f1;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 767.98px) {
+      .task-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -78,6 +191,18 @@
 
         <div class="portfolio-description about-description">
 
+          <!-- VIDEO AT START -->
+          <div class="mb-4 text-center">
+            <div class="video-label">Project Demo</div>
+            <iframe
+              class="vlm-shorts"
+              src="https://www.youtube.com/embed/sGccE8utyrg"
+              title="VLM Demo"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- ORIGINAL TEXT CONTENT (UNCOMPROMISED) -->
           <h2>Vision-Language Model (VLM) Research Prototype</h2>
 
           <p>
@@ -87,16 +212,16 @@
           </p>
 
           <p>
-            Although the current version functions as a <strong>general-purpose perception model</strong>—able to recognize everyday
-            objects such as furniture, tools, fruits, and common household items—it is architected for <strong>task-specific fine-tuning</strong>.
-            This makes it suitable for a wide range of research and applied domains.
+            Although the current version functions as a general-purpose perception model—able to recognize everyday objects such as
+            furniture, tools, fruits, and common household items—it is architected for task-specific fine-tuning. This makes it suitable
+            for a wide range of research and applied domains.
           </p>
 
           <h3>Potential Specialized Applications</h3>
           <p>The model can be fine-tuned for domain-specific tasks, including:</p>
 
           <h4>Precision Agriculture</h4>
-          <ul>
+          <ul class="task-grid">
             <li>Crop disease identification (leaf spots, blights, nutrient deficiencies)</li>
             <li>Yield estimation from in-field imagery</li>
             <li>Weed detection and species classification</li>
@@ -105,7 +230,7 @@
           </ul>
 
           <h4>Robotics, Perception &amp; Navigation</h4>
-          <ul>
+          <ul class="task-grid">
             <li>Semantic scene understanding for mobile robots</li>
             <li>Object detection &amp; tracking for manipulation tasks</li>
             <li>Vision-based SLAM enhancements with multimodal reasoning</li>
@@ -114,7 +239,7 @@
           </ul>
 
           <h4>Mechanical &amp; Industrial Engineering</h4>
-          <ul>
+          <ul class="task-grid">
             <li>Visual quality inspection in manufacturing lines</li>
             <li>Defect detection on surfaces and components</li>
             <li>Tool/part recognition for automated assembly</li>
@@ -126,17 +251,14 @@
           <ul>
             <li><strong>Model size:</strong> 500M parameters (efficient for edge and mid-range GPU deployment)</li>
             <li><strong>Capabilities:</strong> Natural-language grounding, object identification, visual reasoning</li>
-            <li><strong>Deployment:</strong> Runs locally on GPU/CPU; accessed on mobile via low-latency Flask server</li>
+            <li><strong>Deployment:</strong> Runs locally on an GPU/CPU; accessed on mobile via low-latency Flask server</li>
           </ul>
 
           <h3>Why This Matters</h3>
           <p>
             This VLM demonstrates how compact multimodal models can provide high-quality perception without relying on large cloud
-            infrastructures. The system is particularly suitable for field robotics and precision agriculture, where bandwidth,
-            privacy, and real-time performance are critical.
-          </p>
-          <p>
-            It also serves as a foundation for future research into:
+            infrastructures. The system is particularly suitable for field robotics and precision agriculture, where bandwidth, privacy,
+            and real-time performance are critical. It also serves as a foundation for future research into:
           </p>
           <ul>
             <li>Edge-based intelligent crop monitoring</li>
@@ -144,17 +266,6 @@
             <li>Multimodal reasoning for environmental understanding</li>
             <li>On-device visual analytics for low-resource settings</li>
           </ul>
-
-          <!-- Video -->
-          <div class="mt-4">
-            <p><strong>Project Demo:</strong></p>
-            <iframe
-              class="vlm-shorts"
-              src="https://www.youtube.com/embed/sGccE8utyrg"
-              title="VLM Demo"
-              allowfullscreen>
-            </iframe>
-          </div>
 
         </div>
 
@@ -193,5 +304,6 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 
+  </main>
 </body>
 </html>
