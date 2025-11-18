@@ -58,65 +58,7 @@
 <!-- Google Font for Wedding Banner -->
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
-<!-- Wedding Countdown Banner -->
-<div id="wedding-banner-container">
-  <div id="wedding-banner">
-    💍 Aditto and Sathi are getting married in <span id="countdown"></span>
-  </div>
-</div>
 
-<style>
-  #wedding-banner-container {
-    display: flex;
-    justify-content: center;
-    background-color: #1a1a1a;
-    border-bottom: 1px solid #333;
-  }
-
-  #wedding-banner {
-    max-width: 1200px;
-    width: 100%;
-    padding: 10px 20px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 24px;
-    font-weight: 700;
-    color: white;
-    text-align: center;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-</style>
-
-<script>
-  const weddingDate = new Date("April 25, 2025 00:00:00").getTime();
-  const banner = document.getElementById("wedding-banner-container");
-
-  const countdownTimer = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-
-    if (now > weddingDate + 24 * 60 * 60 * 1000) {
-      banner.style.display = "none";
-      clearInterval(countdownTimer);
-      return;
-    }
-
-    if (distance <= 0) {
-      document.getElementById("countdown").innerHTML = "🎉 Just Married!";
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("countdown").innerHTML =
-      `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }, 1000);
-</script> 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
