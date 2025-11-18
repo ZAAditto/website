@@ -1,279 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camera Interaction App</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>VLM Project</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/projcet.css" rel="stylesheet">
+
   <style>
-    :root {
-      --primary: #007bff;
-      --success: #28a745;
-      --danger: #dc3545;
-      --bg: #f0f0f0;
-      --card-bg: #ffffff;
-      --text-color: #333;
-      --border-radius: 10px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text-color);
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 1.8em;
-    }
-
-    #videoFeed {
+    iframe {
       width: 100%;
-      max-width: 480px;
-      height: auto;
-      aspect-ratio: 4/3;
-      background-color: #000;
-      border: 3px solid var(--text-color);
-      border-radius: var(--border-radius);
-    }
-
-    canvas.hidden {
-      display: none;
-    }
-
-    .io-areas,
-    .controls {
-      background-color: var(--card-bg);
-      padding: 20px;
-      border-radius: var(--border-radius);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    textarea,
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      resize: vertical;
-    }
-
-    textarea[readonly] {
-      background-color: #f8f9fa;
-    }
-
-    label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    select {
-      padding: 10px;
-      font-size: 14px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      width: 100%;
-    }
-
-    #startButton {
-      padding: 12px;
-      font-size: 16px;
+      height: 350px;
+      border-radius: 10px;
       border: none;
-      border-radius: 6px;
-      color: white;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-
-    #startButton.start {
-      background-color: var(--success);
-    }
-
-    #startButton.start:hover {
-      background-color: #218838;
-    }
-
-    #startButton.stop {
-      background-color: var(--danger);
-    }
-
-    #startButton.stop:hover {
-      background-color: #c82333;
-    }
-
-    .controls label {
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 600px) {
-      .io-areas, .controls {
-        padding: 15px;
-      }
-
-      h1 {
-        font-size: 1.5em;
-      }
     }
   </style>
 </head>
-<body>
-  <h1>Camera Interaction App</h1>
-  <video id="videoFeed" autoplay playsinline></video>
-  <canvas id="canvas" class="hidden"></canvas>
 
-  <div class="io-areas">
-    <div>
-      <label for="baseURL">Base API:</label>
-      <input type="text" id="baseURL" value="https://4211-103-111-120-253.ngrok-free.app" />
+<body class="portfolio-details-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="arm.html"><i class="bi bi-folder navicon"></i><span>Robotic Arm</span></a></li>
+        <li><a href="cnc.html"><i class="bi bi-folder navicon"></i><span>CNC Machine</span></a></li>
+        <li><a href="iot.html"><i class="bi bi-folder navicon"></i><span>Fingerprint</span></a></li>
+        <li><a href="lfr.html"><i class="bi bi-folder navicon"></i><span>LFR</span></a></li>
+        <li><a href="gloves.html"><i class="bi bi-folder navicon"></i><span>Smart Gloves</span></a></li>
+        <li><a href="soccer.html"><i class="bi bi-folder navicon"></i><span>Soccer Robot</span></a></li>
+        <li><a href="cad.html"><i class="bi bi-folder navicon"></i><span>CAD Designs</span></a></li>
+        <li><a href="vlm.html" class="active"><i class="bi bi-folder navicon"></i><span>VLM Project</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Title -->
+    <div class="page-title-custom" data-aos="fade">
+      <div class="container">
+        <h1>Visual Language Model (VLM) Project</h1>
+      </div>
     </div>
-    <div>
-      <label for="instructionText">Instruction:</label>
-      <textarea id="instructionText" rows="2"></textarea>
-    </div>
-    <div>
-      <label for="responseText">Response:</label>
-      <textarea id="responseText" rows="2" readonly placeholder="Server response will appear here..."></textarea>
-    </div>
-  </div>
 
-  <div class="controls">
-    <label for="intervalSelect">Interval between 2 requests:</label>
-    <select id="intervalSelect">
-      <option value="100">100ms</option>
-      <option value="250">250ms</option>
-      <option value="500" selected>500ms</option>
-      <option value="1000">1s</option>
-      <option value="2000">2s</option>
-    </select>
-    <button id="startButton" class="start">Start</button>
-  </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
 
-  <script>
-    const video = document.getElementById('videoFeed');
-    const canvas = document.getElementById('canvas');
-    const baseURL = document.getElementById('baseURL');
-    const instructionText = document.getElementById('instructionText');
-    const responseText = document.getElementById('responseText');
-    const intervalSelect = document.getElementById('intervalSelect');
-    const startButton = document.getElementById('startButton');
+        <div class="portfolio-description about-description">
 
-    instructionText.value = "What do you see?";
+          <p>
+            This project introduces a <strong>500M-parameter Visual Language Model (VLM)</strong> designed 
+            for real-time perception and multimodal reasoning. The model runs locally on my GPU and is 
+            deployed through a fast Flask-based interface, enabling live camera analysis directly from any 
+            mobile device.
+          </p>
 
-    let stream, intervalId, isProcessing = false;
+          <p>
+            In its general-purpose mode, the VLM can recognize a wide variety of everyday objects such as 
+            tools, fruits, furniture, and common indoor/outdoor items. However, its architecture supports 
+            <strong>domain-specific fine-tuning</strong>, making it suitable for specialized applications in:
+          </p>
 
-    async function sendChatCompletionRequest(instruction, imageBase64URL) {
-      const response = await fetch(`${baseURL.value}/v1/chat/completions`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          max_tokens: 100,
-          messages: [
-            {
-              role: 'user',
-              content: [
-                { type: 'text', text: instruction },
-                { type: 'image_url', image_url: { url: imageBase64URL } }
-              ]
-            }
-          ]
-        })
-      });
+          <ul>
+            <li><strong>Precision Agriculture:</strong> crop disease detection, weed mapping, fruit maturity evaluation, yield estimation</li>
+            <li><strong>Robotics & Perception:</strong> semantic scene understanding, object grounding, navigation assistance, HRI</li>
+            <li><strong>Mechanical Engineering:</strong> surface defect detection, quality inspection, component recognition</li>
+          </ul>
 
-      if (!response.ok) {
-        const errorData = await response.text();
-        return `Server error: ${response.status} - ${errorData}`;
-      }
-      const data = await response.json();
-      return data.choices[0].message.content;
-    }
+          <p>
+            The system provides not only predictions but also <strong>natural-language explanations</strong>, 
+            helping researchers interpret the model’s reasoning process. This makes the VLM valuable for field 
+            robotics, autonomous monitoring, and digital agriculture workflows where edge-based intelligence is 
+            essential.
+          </p>
 
-    async function initCamera() {
-      try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        video.srcObject = stream;
-        responseText.value = "Camera access granted. Ready to start.";
-      } catch (err) {
-        responseText.value = `Error accessing camera: ${err.name} - ${err.message}`;
-        alert("Camera access is required. Please use HTTPS and allow permissions.");
-      }
-    }
+          <!-- Video -->
+          <div class="mt-4">
+            <p><strong>Project Demo:</strong></p>
+            <iframe src="https://www.youtube.com/embed/sGccE8utyrg" title="VLM Demo" allowfullscreen></iframe>
+          </div>
 
-    function captureImage() {
-      if (!stream || !video.videoWidth) return null;
-      canvas.width = video.videoWidth;
-      canvas.height = video.videoHeight;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-      return canvas.toDataURL('image/jpeg', 0.8);
-    }
+        </div>
 
-    async function sendData() {
-      if (!isProcessing) return;
-      const image = captureImage();
-      if (!image) {
-        responseText.value = "Image capture failed.";
-        return;
-      }
-      try {
-        const response = await sendChatCompletionRequest(instructionText.value, image);
-        responseText.value = response;
-      } catch (e) {
-        responseText.value = `Error: ${e.message}`;
-      }
-    }
+      </div>
+    </section>
 
-    function handleStart() {
-      if (!stream) {
-        responseText.value = "Camera not ready.";
-        return;
-      }
-      isProcessing = true;
-      startButton.textContent = "Stop";
-      startButton.classList.remove('start');
-      startButton.classList.add('stop');
-      instructionText.disabled = true;
-      intervalSelect.disabled = true;
-      responseText.value = "Processing started...";
-      sendData();
-      intervalId = setInterval(sendData, parseInt(intervalSelect.value, 10));
-    }
+    <!-- Footer -->
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <div class="credits">
+          © 2025 Zubayer Ahmed Aditto. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
 
-    function handleStop() {
-      isProcessing = false;
-      clearInterval(intervalId);
-      startButton.textContent = "Start";
-      startButton.classList.remove('stop');
-      startButton.classList.add('start');
-      instructionText.disabled = false;
-      intervalSelect.disabled = false;
-      responseText.value = "Processing stopped.";
-    }
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
 
-    startButton.addEventListener('click', () => {
-      isProcessing ? handleStop() : handleStart();
-    });
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-    window.addEventListener('DOMContentLoaded', initCamera);
-    window.addEventListener('beforeunload', () => {
-      if (stream) stream.getTracks().forEach(track => track.stop());
-      if (intervalId) clearInterval(intervalId);
-    });
-  </script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
