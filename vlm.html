@@ -30,6 +30,15 @@
       border-radius: 10px;
       border: none;
     }
+
+    /* More vertical layout for YouTube Shorts */
+    iframe.vlm-shorts {
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
+      height: auto;           /* let aspect-ratio handle height */
+      display: block;
+      margin: 0 auto;
+    }
   </style>
 </head>
 
@@ -69,36 +78,82 @@
 
         <div class="portfolio-description about-description">
 
+          <h2>Vision-Language Model (VLM) Research Prototype</h2>
+
           <p>
-            This project introduces a <strong>500M-parameter Visual Language Model (VLM)</strong> designed 
-            for real-time perception and multimodal reasoning. The model runs locally on my GPU and is 
-            deployed through a fast Flask-based interface, enabling live camera analysis directly from any 
-            mobile device.
+            I have developed a <strong>500M-parameter Vision–Language Model (VLM)</strong> designed as a lightweight yet capable system
+            for real-time visual understanding. The model is optimized to run efficiently on consumer-grade GPUs and can be deployed
+            on mobile devices through a custom Flask-based streaming interface, enabling flexible field use with only a smartphone camera.
           </p>
 
           <p>
-            In its general-purpose mode, the VLM can recognize a wide variety of everyday objects such as 
-            tools, fruits, furniture, and common indoor/outdoor items. However, its architecture supports 
-            <strong>domain-specific fine-tuning</strong>, making it suitable for specialized applications in:
+            Although the current version functions as a <strong>general-purpose perception model</strong>—able to recognize everyday
+            objects such as furniture, tools, fruits, and common household items—it is architected for <strong>task-specific fine-tuning</strong>.
+            This makes it suitable for a wide range of research and applied domains.
           </p>
 
+          <h3>Potential Specialized Applications</h3>
+          <p>The model can be fine-tuned for domain-specific tasks, including:</p>
+
+          <h4>Precision Agriculture</h4>
           <ul>
-            <li><strong>Precision Agriculture:</strong> crop disease detection, weed mapping, fruit maturity evaluation, yield estimation</li>
-            <li><strong>Robotics & Perception:</strong> semantic scene understanding, object grounding, navigation assistance, HRI</li>
-            <li><strong>Mechanical Engineering:</strong> surface defect detection, quality inspection, component recognition</li>
+            <li>Crop disease identification (leaf spots, blights, nutrient deficiencies)</li>
+            <li>Yield estimation from in-field imagery</li>
+            <li>Weed detection and species classification</li>
+            <li>Fruit maturity assessment</li>
+            <li>Soil condition assessment</li>
           </ul>
 
+          <h4>Robotics, Perception &amp; Navigation</h4>
+          <ul>
+            <li>Semantic scene understanding for mobile robots</li>
+            <li>Object detection &amp; tracking for manipulation tasks</li>
+            <li>Vision-based SLAM enhancements with multimodal reasoning</li>
+            <li>Human–robot interaction through natural-language query and explanation</li>
+            <li>Environment-aware path planning based on visual prompts</li>
+          </ul>
+
+          <h4>Mechanical &amp; Industrial Engineering</h4>
+          <ul>
+            <li>Visual quality inspection in manufacturing lines</li>
+            <li>Defect detection on surfaces and components</li>
+            <li>Tool/part recognition for automated assembly</li>
+            <li>Monitoring of machine states through visual cues</li>
+            <li>Safety compliance detection (gear, posture, hazard identification)</li>
+          </ul>
+
+          <h3>Technical Overview</h3>
+          <ul>
+            <li><strong>Model size:</strong> 500M parameters (efficient for edge and mid-range GPU deployment)</li>
+            <li><strong>Capabilities:</strong> Natural-language grounding, object identification, visual reasoning</li>
+            <li><strong>Deployment:</strong> Runs locally on GPU/CPU; accessed on mobile via low-latency Flask server</li>
+          </ul>
+
+          <h3>Why This Matters</h3>
           <p>
-            The system provides not only predictions but also <strong>natural-language explanations</strong>, 
-            helping researchers interpret the model’s reasoning process. This makes the VLM valuable for field 
-            robotics, autonomous monitoring, and digital agriculture workflows where edge-based intelligence is 
-            essential.
+            This VLM demonstrates how compact multimodal models can provide high-quality perception without relying on large cloud
+            infrastructures. The system is particularly suitable for field robotics and precision agriculture, where bandwidth,
+            privacy, and real-time performance are critical.
           </p>
+          <p>
+            It also serves as a foundation for future research into:
+          </p>
+          <ul>
+            <li>Edge-based intelligent crop monitoring</li>
+            <li>Autonomous robotic manipulation</li>
+            <li>Multimodal reasoning for environmental understanding</li>
+            <li>On-device visual analytics for low-resource settings</li>
+          </ul>
 
           <!-- Video -->
           <div class="mt-4">
             <p><strong>Project Demo:</strong></p>
-            <iframe src="https://www.youtube.com/embed/sGccE8utyrg" title="VLM Demo" allowfullscreen></iframe>
+            <iframe
+              class="vlm-shorts"
+              src="https://www.youtube.com/embed/sGccE8utyrg"
+              title="VLM Demo"
+              allowfullscreen>
+            </iframe>
           </div>
 
         </div>
