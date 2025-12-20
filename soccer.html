@@ -1,141 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Remote-Controlled Soccer Robot</title>
+  <title>AI-Based Nitrogen Deficiency Detection and Precision Fertilization System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Journal-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <!-- Bootstrap (optional, for responsiveness) -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/projcet.css" rel="stylesheet">
 
   <style>
-    img {
-      border-radius: 10px;
-      object-fit: cover;
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: #f4f4f4;
+      color: #222;
+      line-height: 1.85;
     }
 
-    .video-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+    .paper {
+      max-width: 900px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 55px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.06);
     }
 
-    .video-container {
-      flex: 1;
-      min-width: 300px;
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: justify;
+      margin-bottom: 16px;
+    }
+
+    .media-section {
+      margin-top: 40px;
     }
 
     iframe {
       width: 100%;
-      height: 250px;
-      border-radius: 10px;
+      height: 420px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
-    .description {
-      margin-top: 10px;
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 10px;
+    .figure {
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .figure img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
     }
   </style>
 </head>
 
-<body class="portfolio-details-page">
+<body>
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="arm.html"><i class="bi bi-folder navicon"></i><span>Robotic Arm</span></a></li>
-        <li><a href="cnc.html"><i class="bi bi-folder navicon"></i><span>CNC Machine</span></a></li>
-        <li><a href="iot.html"><i class="bi bi-folder navicon"></i><span>Fingerprint</span></a></li>
-        <li><a href="lfr.html"><i class="bi bi-folder navicon"></i><span>LFR</span></a></li>
-        <li><a href="gloves.html"><i class="bi bi-folder navicon"></i><span>Smart Gloves</span></a></li>
-        <li><a href="soccer.html"><i class="bi bi-folder navicon"></i><span>Soccer Robot</span></a></li>
-        <li><a href="cad.html"><i class="bi bi-folder navicon"></i><span>CAD Designs</span></a></li>
-      </ul>
-    </nav>
-  </header>
+  <main>
+    <div class="paper">
 
-  <main class="main">
-    <div class="page-title-custom" data-aos="fade">
-      <div class="container">
-        <h1>Remote-Controlled Soccer Robot</h1>
+      <h1>AI-Based Nitrogen Deficiency Detection and Precision Fertilization System</h1>
+
+      <p>
+        This project presents a proof-of-concept precision agriculture system that combines deep learning, web technologies, and embedded systems to detect nitrogen (N) deficiency in corn leaves and recommend fertilizer application based on actual plant requirements.
+      </p>
+
+      <p>
+        Nitrogen deficiency is a major limiting factor in crop productivity. Conventional fertilizer application methods typically apply nitrogen uniformly across fields, which can result in excessive fertilizer use, increased cost, and environmental pollution. This project explores how computer vision and AI-driven decision-making can enable need-based nitrogen management, improving efficiency and sustainability.
+      </p>
+
+      <h2>Dataset and Model Development</h2>
+
+      <p>
+        The system is trained using a publicly available corn leaf nitrogen deficiency dataset from Mendeley Data. A ResNet-18 convolutional neural network was implemented and trained using PyTorch to classify corn leaf images into different nitrogen deficiency levels, such as high deficiency, mild deficiency, and no deficiency.
+      </p>
+
+      <p>
+        After training, the model was saved as a .pth file and optimized for inference in a lightweight application environment suitable for deployment on edge devices.
+      </p>
+
+      <h2>Web-Based Inference System</h2>
+
+      <p>
+        A Flask-based web application was developed to deploy the trained deep learning model. The web interface allows users to drag and drop or upload corn leaf images, which are then analyzed in real time. The system displays:
+      </p>
+
+      <p>
+        Predicted nitrogen deficiency level
+      </p>
+
+      <p>
+        Suggested nitrogen fertilizer amount (e.g., no spraying, 2 g, or 5 g nitrogen)
+      </p>
+
+      <p>
+        This interface simulates how AI-assisted crop monitoring can be performed in a practical farming scenario.
+      </p>
+
+      <h2>Embedded System Integration</h2>
+
+      <p>
+        To demonstrate system-level integration, the prediction results generated by the Flask application are transmitted wirelessly to an ESP8266 microcontroller. The ESP8266 displays the classification result and fertilizer recommendation on an OLED display, such as:
+      </p>
+
+      <p>
+        “Mild N Deficiency – Spray 2 g Nitrogen”
+      </p>
+
+      <p>
+        Although no physical spraying mechanism is currently implemented, this step validates real-time communication between AI software and embedded hardware, which is critical for field deployment.
+      </p>
+
+      <h2>Real-World Implementation Scenario</h2>
+
+      <p>
+        In a real agricultural deployment, this system can be integrated with a side-dressing tractor or fertilizer application machine to enable real-time, plant-specific nitrogen spraying.
+      </p>
+
+      <p>
+        A camera mounted on the side of the tractor continuously captures images of corn leaves as the vehicle moves along crop rows. These images are sent in real time to an on-board edge computing device, such as an NVIDIA Jetson Nano or Raspberry Pi, installed on the machine.
+      </p>
+
+      <p>
+        The edge computer runs the trained deep learning model locally, allowing low-latency, offline inference without dependence on cloud connectivity. Each image is analyzed to determine the nitrogen deficiency level of the plant. Based on the model’s output, a control algorithm computes the required fertilizer dosage.
+      </p>
+
+      <p>
+        The computed decision is then converted into actuation commands, which are sent to electronically controlled sprayers or solenoid valves mounted on the tractor. This enables nitrogen fertilizer to be applied only where and in the amount needed, rather than uniformly across the field.
+      </p>
+
+      <h2>Significance and Future Scope</h2>
+
+      <p>
+        This project demonstrates the feasibility of transforming AI-based crop health analysis into actionable agricultural decisions. While the current implementation focuses on image classification and decision communication, the system architecture is fully extensible.
+      </p>
+
+      <p>
+        Future work may include:
+      </p>
+
+      <p>Integration with variable-rate sprayers or pumps</p>
+      <p>Deployment on autonomous ground vehicles or drones</p>
+      <p>Multi-nutrient deficiency detection</p>
+      <p>Field validation under real environmental conditions</p>
+
+      <h2>Technologies Used</h2>
+
+      <p>PyTorch (ResNet-18)</p>
+      <p>Flask (Web Application)</p>
+      <p>ESP8266 (IoT Communication)</p>
+      <p>OLED Display</p>
+      <p>Python, HTML, CSS</p>
+
+      <p>
+        This mini-project serves as a foundational step toward AI-driven precision farming, demonstrating how deep learning, edge computing, and embedded systems can work together to enable efficient, sustainable agricultural practices.
+      </p>
+
+      <h2>Model Evaluation Metrics</h2>
+
+      <p>
+        The nitrogen deficiency classification model was evaluated using precision, recall, F1-score, and a confusion matrix to understand how reliably the system can support AI-driven, need-based fertilizer decisions.
+      </p>
+
+      <p>
+        N0 (High Nitrogen Deficiency) shows strong performance (Precision = 0.793, Recall = 0.863, F1-score = 0.826). The high recall indicates that most severely nitrogen-deficient plants are correctly identified. This is particularly important in precision agriculture, as missing highly deficient plants would directly affect crop growth and yield.
+      </p>
+
+      <p>
+        N75 (Mild Nitrogen Deficiency) exhibits lower performance (Precision = 0.600, Recall = 0.300, F1-score = 0.400). The confusion matrix indicates that many mildly deficient samples are misclassified as either high deficiency (N0) or no deficiency (NFull). This reflects the visual similarity of intermediate nitrogen stress levels and highlights a known challenge in fine-grained nutrient deficiency classification.
+      </p>
+
+      <p>
+        NFull (No Nitrogen Deficiency) achieves very high recall (0.938) with a solid F1-score (0.777), meaning the model is highly reliable at identifying healthy plants where no fertilizer application is required. This directly supports the system’s goal of avoiding unnecessary nitrogen spraying, reducing cost and environmental impact.
+      </p>
+
+      <p>
+        Overall, the confusion matrix shows that the model performs best at detecting extreme conditions—high deficiency (N0) and no deficiency (NFull)—which are the most critical for real-world actuation decisions. Despite limitations in mild deficiency detection, the results validate the feasibility of using computer vision–based AI models for actionable, plant-specific nitrogen management in precision farming systems.
+      </p>
+
+      <h2>Explainable AI Using Grad-CAM</h2>
+
+      <p>
+        To ensure the transparency and interpretability of the nitrogen deficiency detection model, Grad-CAM (Gradient-weighted Class Activation Mapping) was employed. Grad-CAM is a visualization technique that highlights the regions of an input image that are most influential in the model’s decision-making process.
+      </p>
+
+      <p>
+        In this project, Grad-CAM generates heatmaps over corn leaf images, indicating the specific leaf areas that the ResNet-18 model focuses on when classifying nitrogen deficiency levels. For instance:
+      </p>
+
+      <p>
+        In N0 (high deficiency) leaves, Grad-CAM highlights the most chlorotic (yellowed) regions, showing that the model correctly identifies the stressed areas.
+      </p>
+
+      <p>
+        For NFull (healthy) leaves, the heatmaps emphasize uniformly green regions, reinforcing that the model is basing its predictions on healthy leaf features rather than irrelevant background.
+      </p>
+
+      <p>
+        In N75 (mild deficiency), Grad-CAM can reveal why some samples are misclassified, as the highlighted areas may overlap with both healthy and severely deficient patterns, reflecting the visual ambiguity in intermediate deficiency levels.
+      </p>
+
+      <p>
+        By incorporating Grad-CAM, this work not only provides accurate nitrogen deficiency predictions but also offers explainable insights for users.
+      </p>
+
+      <div class="media-section">
+        <h2>System Demonstration</h2>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
       </div>
+
+      <div class="figure">
+        <img src="assets/img/confusion_matrix.png" alt="Confusion Matrix">
+        <div class="caption">Figure 1: Confusion Matrix of Nitrogen Deficiency Classification</div>
+      </div>
+
+      <div class="figure">
+        <img src="assets/img/workflow.png" alt="System Workflow">
+        <div class="caption">Figure 2: End-to-End System Workflow</div>
+      </div>
+
     </div>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <div class="text-center mb-4">
-          <img src="assets/img/soccer.jpg" alt="Soccer Robot" class="img-fluid" style="border-radius: 10px; object-fit: cover;">
-        </div>
-
-        <!-- Description Section -->
-        <div class="portfolio-description about-description">
-         <p>In Bangladesh, there's a well-known competition where robots compete in a soccer match, trying to score goals against each other. I developed a robot specifically for this contest, and its unique feature is it’s hand-crafted controller. The joystick's circuit is entirely handmade. A Bluetooth module is used to control the soccer bot. To ensure robustness against opponents, I first designed the robot in CAD software (Autodesk Fusion 360). Following these designs the robot is constructed. It is powered by four high-torque motors.</p>
-          <div class="row gy-4 align-items-start">
-
-            <!-- Mode 2 Video -->
-            <div class="col-lg-6">
-              <p><strong>Video Demonstration</strong></p>
-              <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/DgLGlUplpDM" title="CNC" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer id="footer" class="footer position-relative light-background">
-      <div class="container">
-        <div class="copyright text-center ">
-        </div>
-        <div class="credits">
-          © 2025 Zubayer Ahmed Aditto. All Rights Reserved.
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+  </main>
 
 </body>
-
 </html>
