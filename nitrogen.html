@@ -10,6 +10,7 @@
 
   <!-- Bootstrap (optional, for responsiveness) -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
   <style>
     body {
@@ -75,15 +76,96 @@
       color: #555;
       margin-top: 8px;
     }
+
+    /* Navigation Menu */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+      z-index: 999;
+      padding-top: 30px;
+    }
+
+    .navmenu ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .navmenu ul li {
+      margin-bottom: 20px;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      color: #222;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    .navmenu ul li a.active {
+      background: #4f46e5;
+      color: #fff;
+    }
+
+    .navmenu ul li a:hover {
+      background: #e0e0ff;
+    }
+
+    main {
+      margin-left: 240px;
+      padding: 40px 20px;
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation Menu -->
+  <header id="header" class="header d-flex flex-column justify-content-start">
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="arm.html"><i class="bi bi-folder navicon"></i><span>Robotic Arm</span></a></li>
+        <li><a href="cnc.html"><i class="bi bi-folder navicon"></i><span>CNC Machine</span></a></li>
+        <li><a href="iot.html"><i class="bi bi-folder navicon"></i><span>Fingerprint</span></a></li>
+        <li><a href="lfr.html"><i class="bi bi-folder navicon"></i><span>LFR</span></a></li>
+        <li><a href="gloves.html"><i class="bi bi-folder navicon"></i><span>Smart Gloves</span></a></li>
+        <li><a href="soccer.html"><i class="bi bi-folder navicon"></i><span>Soccer Robot</span></a></li>
+        <li><a href="cad.html"><i class="bi bi-folder navicon"></i><span>CAD Designs</span></a></li>
+        <li><a href="vlm.html" class="active"><i class="bi bi-folder navicon"></i><span>VLM Project</span></a></li>
+        <li><a href="nitrogen.html" class="active"><i class="bi bi-folder navicon"></i><span>Nitrogen Project</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
     <div class="paper">
 
       <h1>AI-Based Nitrogen Deficiency Detection and Precision Fertilization System</h1>
+
+      <!-- System Demonstration moved to top -->
+      <div class="media-section">
+        <h2>System Demonstration</h2>
+        <iframe src="https://www.youtube.com/embed/LhVj_xHFFNM" allowfullscreen></iframe>
+
+        <!-- Confusion matrix and workflow images moved here -->
+        <div class="figure">
+          <img src="assets/img/confusion_matrix.png" alt="Confusion Matrix">
+          <div class="caption">Figure 1: Confusion Matrix of Nitrogen Deficiency Classification</div>
+        </div>
+
+        <div class="figure">
+          <img src="assets/img/workflow.png" alt="System Workflow">
+          <div class="caption">Figure 2: End-to-End System Workflow</div>
+        </div>
+      </div>
 
       <p>
         This project presents a proof-of-concept precision agriculture system that combines deep learning, web technologies, and embedded systems to detect nitrogen (N) deficiency in corn leaves and recommend fertilizer application based on actual plant requirements.
@@ -96,7 +178,10 @@
       <h2>Dataset and Model Development</h2>
 
       <p>
-        The system is trained using a publicly available corn leaf nitrogen deficiency dataset from Mendeley Data. A ResNet-18 convolutional neural network was implemented and trained using PyTorch to classify corn leaf images into different nitrogen deficiency levels, such as high deficiency, mild deficiency, and no deficiency.
+        The system is trained using a publicly available corn leaf nitrogen deficiency dataset from Mendeley Data <a href="https://data.mendeley.com/datasets/g7xnn2bm4g/1" target="_blank" rel="noopener">
+  https://data.mendeley.com/datasets/g7xnn2bm4g/1
+</a>
+. A ResNet-18 convolutional neural network was implemented and trained using PyTorch to classify corn leaf images into different nitrogen deficiency levels, such as high deficiency, mild deficiency, and no deficiency.
       </p>
 
       <p>
@@ -108,18 +193,11 @@
       <p>
         A Flask-based web application was developed to deploy the trained deep learning model. The web interface allows users to drag and drop or upload corn leaf images, which are then analyzed in real time. The system displays:
       </p>
-
-      <p>
-        Predicted nitrogen deficiency level
-      </p>
-
-      <p>
-        Suggested nitrogen fertilizer amount (e.g., no spraying, 2 g, or 5 g nitrogen)
-      </p>
-
-      <p>
-        This interface simulates how AI-assisted crop monitoring can be performed in a practical farming scenario.
-      </p>
+      <ul>
+        <li>Predicted nitrogen deficiency level</li>
+        <li>Suggested nitrogen fertilizer amount (e.g., no spraying, 2 g, or 5 g nitrogen)</li>
+        <li>This interface simulates how AI-assisted crop monitoring can be performed in a practical farming scenario.</li>
+      </ul>
 
       <h2>Embedded System Integration</h2>
 
@@ -162,20 +240,21 @@
       <p>
         Future work may include:
       </p>
-
-      <p>Integration with variable-rate sprayers or pumps</p>
-      <p>Deployment on autonomous ground vehicles or drones</p>
-      <p>Multi-nutrient deficiency detection</p>
-      <p>Field validation under real environmental conditions</p>
+      <ul>
+        <li>Integration with variable-rate sprayers or pumps</li>
+        <li>Deployment on autonomous ground vehicles or drones</li>
+        <li>Multi-nutrient deficiency detection</li>
+        <li>Field validation under real environmental conditions</li>
+      </ul>
 
       <h2>Technologies Used</h2>
-
-      <p>PyTorch (ResNet-18)</p>
-      <p>Flask (Web Application)</p>
-      <p>ESP8266 (IoT Communication)</p>
-      <p>OLED Display</p>
-      <p>Python, HTML, CSS</p>
-
+      <ul>
+        <li>PyTorch (ResNet-18)</li>
+        <li>Flask (Web Application)</li>
+        <li>ESP8266 (IoT Communication)</li>
+        <li>OLED Display</li>
+        <li>Python, HTML, CSS</li>
+      </ul>
       <p>
         This mini-project serves as a foundational step toward AI-driven precision farming, demonstrating how deep learning, edge computing, and embedded systems can work together to enable efficient, sustainable agricultural practices.
       </p>
@@ -185,19 +264,11 @@
       <p>
         The nitrogen deficiency classification model was evaluated using precision, recall, F1-score, and a confusion matrix to understand how reliably the system can support AI-driven, need-based fertilizer decisions.
       </p>
-
-      <p>
-        N0 (High Nitrogen Deficiency) shows strong performance (Precision = 0.793, Recall = 0.863, F1-score = 0.826). The high recall indicates that most severely nitrogen-deficient plants are correctly identified. This is particularly important in precision agriculture, as missing highly deficient plants would directly affect crop growth and yield.
-      </p>
-
-      <p>
-        N75 (Mild Nitrogen Deficiency) exhibits lower performance (Precision = 0.600, Recall = 0.300, F1-score = 0.400). The confusion matrix indicates that many mildly deficient samples are misclassified as either high deficiency (N0) or no deficiency (NFull). This reflects the visual similarity of intermediate nitrogen stress levels and highlights a known challenge in fine-grained nutrient deficiency classification.
-      </p>
-
-      <p>
-        NFull (No Nitrogen Deficiency) achieves very high recall (0.938) with a solid F1-score (0.777), meaning the model is highly reliable at identifying healthy plants where no fertilizer application is required. This directly supports the system’s goal of avoiding unnecessary nitrogen spraying, reducing cost and environmental impact.
-      </p>
-
+      <ul>
+        <li>N0 (High Nitrogen Deficiency) shows strong performance (Precision = 0.793, Recall = 0.863, F1-score = 0.826). The high recall indicates that most severely nitrogen-deficient plants are correctly identified. This is particularly important in precision agriculture, as missing highly deficient plants would directly affect crop growth and yield.</li>
+        <li>N75 (Mild Nitrogen Deficiency) exhibits lower performance (Precision = 0.600, Recall = 0.300, F1-score = 0.400). The confusion matrix indicates that many mildly deficient samples are misclassified as either high deficiency (N0) or no deficiency (NFull). This reflects the visual similarity of intermediate nitrogen stress levels and highlights a known challenge in fine-grained nutrient deficiency classification.</li>
+        <li>NFull (No Nitrogen Deficiency) achieves very high recall (0.938) with a solid F1-score (0.777), meaning the model is highly reliable at identifying healthy plants where no fertilizer application is required. This directly supports the system’s goal of avoiding unnecessary nitrogen spraying, reducing cost and environmental impact.</li>
+      </ul>
       <p>
         Overall, the confusion matrix shows that the model performs best at detecting extreme conditions—high deficiency (N0) and no deficiency (NFull)—which are the most critical for real-world actuation decisions. Despite limitations in mild deficiency detection, the results validate the feasibility of using computer vision–based AI models for actionable, plant-specific nitrogen management in precision farming systems.
       </p>
@@ -211,37 +282,11 @@
       <p>
         In this project, Grad-CAM generates heatmaps over corn leaf images, indicating the specific leaf areas that the ResNet-18 model focuses on when classifying nitrogen deficiency levels. For instance:
       </p>
-
-      <p>
-        In N0 (high deficiency) leaves, Grad-CAM highlights the most chlorotic (yellowed) regions, showing that the model correctly identifies the stressed areas.
-      </p>
-
-      <p>
-        For NFull (healthy) leaves, the heatmaps emphasize uniformly green regions, reinforcing that the model is basing its predictions on healthy leaf features rather than irrelevant background.
-      </p>
-
-      <p>
-        In N75 (mild deficiency), Grad-CAM can reveal why some samples are misclassified, as the highlighted areas may overlap with both healthy and severely deficient patterns, reflecting the visual ambiguity in intermediate deficiency levels.
-      </p>
-
-      <p>
-        By incorporating Grad-CAM, this work not only provides accurate nitrogen deficiency predictions but also offers explainable insights for users.
-      </p>
-
-      <div class="media-section">
-        <h2>System Demonstration</h2>
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-      </div>
-
-      <div class="figure">
-        <img src="assets/img/confusion_matrix.png" alt="Confusion Matrix">
-        <div class="caption">Figure 1: Confusion Matrix of Nitrogen Deficiency Classification</div>
-      </div>
-
-      <div class="figure">
-        <img src="assets/img/workflow.png" alt="System Workflow">
-        <div class="caption">Figure 2: End-to-End System Workflow</div>
-      </div>
+      <ul>
+        <li>In N0 (high deficiency) leaves, Grad-CAM highlights the most chlorotic (yellowed) regions, showing that the model correctly identifies the stressed areas.</li>
+        <li>For NFull (healthy) leaves, the heatmaps emphasize uniformly green regions, reinforcing that the model is basing its predictions on healthy leaf features rather than irrelevant background.</li>
+        <li>In N75 (mild deficiency), Grad-CAM can reveal why some samples are misclassified, as the highlighted areas may overlap with both healthy and severely deficient patterns, reflecting the visual ambiguity in intermediate deficiency levels.</li>
+      </ul>
 
     </div>
   </main>
