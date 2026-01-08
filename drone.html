@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Voice-Controlled Drone Using a Fine-Tuned Large Language Model</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Merriweather', serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.85;
+  }
+
+  .paper {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 55px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.06);
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 35px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .figure {
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .figure img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+  }
+
+  .caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 420px;
+    border: 1px solid #ccc;
+  }
+
+  main {
+    margin-left: 240px;
+    padding: 40px 20px;
+  }
+
+  #header {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+    padding-top: 30px;
+  }
+
+  .navmenu ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .navmenu ul li {
+    margin-bottom: 18px;
+  }
+
+  .navmenu ul li a {
+    text-decoration: none;
+    color: #222;
+    padding: 6px 12px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .navmenu ul li a.active {
+    background: #4f46e5;
+    color: #fff;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 768px) {
+    #header {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    main {
+      margin-left: 0;
+    }
+    .paper {
+      padding: 30px 20px;
+    }
+    iframe {
+      height: 300px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header id="header">
+  <nav class="navmenu">
+    <ul>
+       <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="arm.html"><i class="bi bi-folder navicon"></i><span>Robotic Arm</span></a></li>
+        <li><a href="cnc.html"><i class="bi bi-folder navicon"></i><span>CNC Machine</span></a></li>
+        <li><a href="iot.html"><i class="bi bi-folder navicon"></i><span>Fingerprint</span></a></li>
+        <li><a href="lfr.html"><i class="bi bi-folder navicon"></i><span>LFR</span></a></li>
+        <li><a href="gloves.html"><i class="bi bi-folder navicon"></i><span>Smart Gloves</span></a></li>
+        <li><a href="soccer.html"><i class="bi bi-folder navicon"></i><span>Soccer Robot</span></a></li>
+        <li><a href="cad.html"><i class="bi bi-folder navicon"></i><span>CAD Designs</span></a></li>
+        <li><a href="vlm.html"><i class="bi bi-folder navicon"></i><span>VLM Project</span></a></li>
+        <li><a href="nitrogen.html"><i class="bi bi-folder navicon"></i><span>Nitrogen Project</span></a></li>
+      <li><a href="drone.html" class="active"><i class="bi bi-folder"></i> Voice-Controlled Drone</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<div class="paper">
+
+<h1>Voice-Controlled Drone Using a Fine-Tuned Large Language Model (LLM)</h1>
+
+<h2>System Demonstration</h2>
+
+<h3>Drone in Action (Gazebo)</h3>
+<iframe src="https://www.youtube.com/embed/ckzm0ZNHVD8" allowfullscreen></iframe>
+
+<h3 style="margin-top:30px;">Drone Running via Python Script</h3>
+<iframe src="https://www.youtube.com/embed/hhUNhCA7gWc" allowfullscreen></iframe>
+
+<div class="figure">
+  <img src="assets/img/drone_pipeline.png" alt="LLM-Based Drone Control Pipeline">
+  <div class="caption">Figure 1: End-to-End LLM-Based Voice-Controlled Drone Pipeline</div>
+</div>
+
+<h2>Overview</h2>
+
+<p>
+This project presents a voice-controlled unmanned aerial vehicle (UAV) system powered by a fine-tuned Large Language Model (LLM) that enables robust, natural-language-based drone control in complex real-world environments.
+Instead of relying on rigid command formats, the system interprets human intent from diverse, noisy, and ambiguous voice commands and converts them into structured drone actions.
+</p>
+
+<p>
+The proposed framework is designed to be application-agnostic, making it suitable for use in precision agriculture, industrial inspection sites, construction and civil engineering projects, surveying and mapping operations, and search-and-rescue or disaster-response scenarios.
+</p>
+
+<h2>Motivation</h2>
+
+<p>
+Traditional drone control systems depend on either manual joystick input or strictly formatted voice commands. However, in real operational environments, operators often have occupied hands, situations demand fast intuitive interaction, commands vary significantly between users, and background noise is common.
+</p>
+
+<p>
+For example, the same drone action may be expressed as “Take off to 5 meters”, “Go up 5 meters”, or “Launch and climb 5 m”. Conventional NLP pipelines struggle to handle such linguistic variability.
+</p>
+
+<h2>Objectives</h2>
+
+<ul>
+  <li>Enable natural language voice commands for drone operation</li>
+  <li>Translate unstructured speech into structured drone control commands</li>
+  <li>Handle linguistic variability, paraphrasing, and partial ambiguity</li>
+  <li>Improve robustness under noisy field conditions</li>
+  <li>Provide a scalable control framework applicable across multiple domains</li>
+</ul>
+
+<h2>Challenges in Real-World Drone Operation</h2>
+
+<p>
+Drones are increasingly used in environments where operators may be walking, climbing, or inspecting structures, visual attention is divided, and immediate decision-making is required.
+</p>
+
+<p>
+These conditions expose the limitations of rule-based or traditional NLP-based voice control systems.
+</p>
+
+<h2>Proposed Solution: LLM-Based Voice-Controlled Drone System</h2>
+
+<p>
+This work proposes the use of a fine-tuned LLM to directly model the semantic intent behind voice commands, rather than relying on surface-level keyword matching.
+</p>
+
+<h2>Dataset Preparation (LLM-Assisted)</h2>
+
+<p>
+The dataset covers seven fundamental drone actions: ARM, DISARM, TAKEOFF, LAND, MOVE, RTL, and STOP.
+</p>
+
+<div class="figure">
+  <img src="assets/img/dataset_format.png" alt="Dataset Format Screenshot">
+  <div class="caption">Figure 2: Dataset Format and Instruction-Style Labeling</div>
+</div>
+
+<p>
+The dataset is generated using base command templates, LLM-based paraphrasing with DistilGPT-2, parameter randomization, and instruction-style JSON labeling.
+</p>
+
+<h2>LLM Fine-Tuning Pipeline</h2>
+
+<p>
+The base model used is Phi-3 Mini (3.8B parameters), selected due to its strong instruction-following capability and ability to operate within 8GB GPU constraints.
+</p>
+
+<p>
+Fine-tuning was performed using supervised fine-tuning with LoRA, 4-bit quantization, and optimized training settings to prevent overfitting.
+</p>
+
+<h2>Model Evaluation</h2>
+
+<div class="figure">
+  <img src="assets/img/confusion_matrix.png" alt="Confusion Matrix">
+  <div class="caption">Figure 3: Confusion Matrix of Drone Command Classification</div>
+</div>
+
+<p>
+The model achieved an overall accuracy of 68.3% across seven command classes. Strong performance was observed for LAND, MOVE, and TAKEOFF, while safety-critical commands such as STOP showed confusion with MOVE.
+</p>
+
+<h2>System Testing and Deployment</h2>
+
+<p>
+The system was validated in a Gazebo simulation environment, confirming voice-to-command translation, structured command generation, and Python-based control integration.
+</p>
+
+<p>
+Real-drone deployment was not performed due to flight controller constraints; however, the architecture is fully transferable to physical UAV platforms.
+</p>
+
+<h2>Significance and Future Work</h2>
+
+<p>
+This work demonstrates the feasibility of LLM-driven voice control for UAVs operating in complex, real-world environments.
+</p>
+
+<ul>
+  <li>Safety-aware command classification</li>
+  <li>Multilingual command support</li>
+  <li>Real-drone deployment</li>
+  <li>Onboard inference optimization</li>
+  <li>Integration with vision-based decision systems</li>
+</ul>
+
+</div>
+</main>
+
+</body>
+</html>
