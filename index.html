@@ -151,22 +151,21 @@
     
           <!-- Test Scores Section -->
           <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="150">
-            <h3 class="resume-title" style="font-size: 30px; font-weight: bold; margin-bottom: 15px;">Test Scores</h3>
-            <div class="resume-item" style="margin-bottom: 20px;">
-              <h4 style="font-size: 22px; font-weight: bold; line-height: 1.5;">Graduate Record Examination (GRE)</h4>
-              <p style="font-size: 16px;">Score: 319</p>
-              <p style="font-size: 16px;">Verbal: 153 | Quantitative: 166 | AWA: 3.0</p>
-            </div>
-          </div>
+  <h3 class="resume-title" style="font-size: 30px; font-weight: bold; margin-bottom: 15px;">Test Scores</h3>
 
-          <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="150">
-            <h3 class="resume-title" style="font-size: 30px; font-weight: bold; margin-bottom: 15px;">Test Scores</h3>
-            <div class="resume-item" style="margin-bottom: 20px;">
-              <h4 style="font-size: 22px; font-weight: bold; line-height: 1.5;">International English Language Testing System (IELTS)</h4>
-              <p style="font-size: 16px;">Score: 7.0</p>
-              <p style="font-size: 16px;">Listening: 7.5 | Reading: 7.5 | Writing: 6.0 | Speaking: 6.0</p>
-            </div>
-          </div>
+  <div class="resume-item" style="margin-bottom: 20px;">
+    <h4 style="font-size: 22px; font-weight: bold;">Graduate Record Examination (GRE)</h4>
+    <p style="font-size: 16px;">Score: 319</p>
+    <p style="font-size: 16px;">Verbal: 153 | Quantitative: 166 | AWA: 3.0</p>
+  </div>
+
+  <div class="resume-item" style="margin-bottom: 20px;">
+    <h4 style="font-size: 22px; font-weight: bold;">International English Language Testing System (IELTS)</h4>
+    <p style="font-size: 16px;">Score: 7.0</p>
+    <p style="font-size: 16px;">Listening: 7.5 | Reading: 7.5 | Writing: 6.0 | Speaking: 6.0</p>
+  </div>
+</div>
+
           
         </div>
     
@@ -331,7 +330,7 @@
     
     
     
-   <!-- Portfolio Section -->
+<!-- Projects Section -->
 <section id="projects" class="portfolio section white-background">
 
   <!-- Section Title -->
@@ -341,131 +340,139 @@
   </div>
 
   <div class="container">
-    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+    <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
 
-      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+      <style>
+        .portfolio-card {
+          position: relative;
+          overflow: hidden;
+          border-radius: 12px;
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+          transition: transform 0.3s ease;
+        }
+        .portfolio-card:hover {
+          transform: translateY(-6px);
+        }
+        .portfolio-card img {
+          width: 100%;
+          height: 230px;
+          object-fit: cover;
+          transition: transform 0.4s ease;
+        }
+        .portfolio-card:hover img {
+          transform: scale(1.1);
+        }
+        .portfolio-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.75);
+          color: #fff;
+          text-align: center;
+          padding: 12px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      </style>
 
-        <style>
-          .portfolio-content {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          }
-          .portfolio-content img {
-            width: 100%;
-            transition: transform 0.3s ease;
-          }
-          .portfolio-content:hover img {
-            transform: scale(1.1);
-          }
-          .portfolio-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-          }
-          .portfolio-content:hover .portfolio-info {
-            opacity: 1;
-          }
-        </style>
-
-        <!-- Project Items -->
-
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-          <div class="portfolio-content h-100">
-            <a href="arm.html">
-              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info"><h4>Multifunctional Robotic Arm</h4></div>
-            </a>
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="arm.html">
+          <div class="portfolio-card">
+            <img src="assets/img/portfolio/app-1.jpg" alt="Multifunctional Robotic Arm">
+            <div class="portfolio-overlay">Multifunctional Robotic Arm</div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-          <div class="portfolio-content h-100">
-            <a href="cnc.html">
-              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info"><h4>CNC Machine</h4></div>
-            </a>
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="cnc.html">
+          <div class="portfolio-card">
+            <img src="assets/img/portfolio/product-1.jpg" alt="CNC Machine">
+            <div class="portfolio-overlay">CNC Machine</div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-          <div class="portfolio-content h-100">
-            <a href="iot.html">
-              <img src="assets/img/portfolio/finger.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info"><h4>IoT Based Fingerprint Attendance System</h4></div>
-            </a>
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="iot.html">
+          <div class="portfolio-card">
+            <img src="assets/img/portfolio/finger.jpg" alt="IoT Fingerprint Attendance System">
+            <div class="portfolio-overlay">IoT Fingerprint Attendance System</div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-          <div class="portfolio-content h-100">
-            <a href="lfr.html">
-              <img src="assets/img/portfolio/lfr.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info"><h4>Advanced Line & Wall Following Robot</h4></div>
-            </a>
+      <!-- Project 4 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="lfr.html">
+          <div class="portfolio-card">
+            <img src="assets/img/portfolio/lfr.jpg" alt="Advanced Line Following Robot">
+            <div class="portfolio-overlay">Advanced Line & Wall Following Robot</div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-          <div class="portfolio-content h-100">
-            <a href="gloves.html">
-              <img src="assets/img/portfolio/gloves.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info"><h4>Smart Hand Gloves for Deaf and Mute People</h4></div>
-            </a>
+      <!-- Project 5 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="gloves.html">
+          <div class="portfolio-card">
+            <img src="assets/img/portfolio/gloves.jpg" alt="Smart Hand Gloves">
+            <div class="portfolio-overlay">Smart Hand Gloves for Deaf & Mute</div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-          <div class="portfolio-content h-100">
-            <a href="soccer.html">
-              <img src="assets/img/portfolio/soccer.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info"><h4>Remote-Controlled Soccer Robot</h4></div>
-            </a>
+      <!-- Project 6 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="soccer.html">
+          <div class="portfolio-card">
+            <img src="assets/img/portfolio/soccer.jpeg" alt="Soccer Robot">
+            <div class="portfolio-overlay">Remote-Controlled Soccer Robot</div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-          <div class="portfolio-content h-100">
-            <a href="drone.html">
-              <img src="assets/img/portfolio/drone.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info"><h4>LLM Drone</h4></div>
-            </a>
+      <!-- Project 7 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="drone.html">
+          <div class="portfolio-card">
+            <img src="assets/img/portfolio/drone.jpg" alt="LLM Drone">
+            <div class="portfolio-overlay">LLM-Integrated Autonomous Drone</div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-          <div class="portfolio-content h-100">
-            <a href="nitrogen.html">
-              <img src="assets/img/portfolio/nitrogen.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Nitrogen Deficiency Detection & Precision Fertilization</h4>
-              </div>
-            </a>
+      <!-- Project 8 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="nitrogen.html">
+          <div class="portfolio-card">
+            <img src="assets/img/portfolio/nitrogen.png" alt="Nitrogen Deficiency Detection">
+            <div class="portfolio-overlay">
+              Nitrogen Deficiency Detection & Precision Fertilization
+            </div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-          <div class="portfolio-content h-100">
-            <a href="cad.html">
-              <img src="assets/img/portfolio/cad.png" class="img-fluid" alt="">
-              <div class="portfolio-info"><h4>My CAD Designs</h4></div>
-            </a>
+      <!-- Project 9 -->
+      <div class="col-lg-4 col-md-6">
+        <a href="cad.html">
+          <div class="portfolio-card">
+            <img src="assets/img/portfolio/cad.png" alt="CAD Designs">
+            <div class="portfolio-overlay">My CAD Designs</div>
           </div>
-        </div>
+        </a>
+      </div>
 
-      </div><!-- End Portfolio Container -->
     </div>
   </div>
 
 </section>
+<!-- /Projects Section -->
 
 
     <section id="contact" class="contact section light-background">
