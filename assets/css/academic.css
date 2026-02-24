@@ -33,7 +33,8 @@ body { font-family: 'Source Sans 3', sans-serif; color: var(--text-primary); bac
 .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--gold); transition: var(--transition); }
 .nav-links a:hover { color: var(--navy); }
 .nav-links a:hover::after { width: 100%; }
-.nav-social { width: 36px; height: 36px; border-radius: 50%; background: var(--gold-dim); display: flex; align-items: center; justify-content: center; color: var(--gold); text-decoration: none; font-size: 0.9rem; transition: var(--transition); }
+.nav-socials { display: flex; gap: .5rem; }
+.nav-social { width: 34px; height: 34px; border-radius: 50%; background: var(--gold-dim); display: flex; align-items: center; justify-content: center; color: var(--gold); text-decoration: none; font-size: 0.85rem; transition: var(--transition); }
 .nav-social:hover { background: var(--gold); color: var(--white); }
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; transition: var(--transition); }
